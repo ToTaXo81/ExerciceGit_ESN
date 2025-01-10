@@ -28,11 +28,11 @@
 </head>
 <body>
     <h1>Dépôt de candidature</h1>
-    <form action="upload.php" method="post" enctype="multipart/form-data">
+    <form method="post">
         <label for="fileToUpload">Choisir fichier :</label>
-        <input type="file" name="fileToUpload" id="fileToUpload">
+        <input type="file" name="candidature" id="fileToUpload">
         <br><br>
-        <input type="submit" value="Envoyer" name="submit">
+        <button type="submit" value="Envoyer" name="submit">Envoyer</button>
     </form>
 </body>
 </html>
