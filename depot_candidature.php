@@ -1,3 +1,11 @@
+<?php
+var_dump($_SERVER['REQUEST_METHOD']);
+if ($_SERVER['REQUEST_METHOD'] =='POST')
+    {
+        var_dump($_FILES);
+        move_uploaded_file($_FILES["candidature"]["tmp_name"],"candidatures/".$_FILES["candidature"]["name"]);
+    }
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -28,7 +36,7 @@
 </head>
 <body>
     <h1>Dépôt de candidature</h1>
-    <form method="post">
+    <form method="post" enctype="multipart/form-data">
         <label for="fileToUpload">Choisir fichier :</label>
         <input type="file" name="candidature" id="fileToUpload">
         <br><br>
