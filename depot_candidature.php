@@ -4,7 +4,9 @@ if ($_SERVER['REQUEST_METHOD'] =='POST')
     {
         var_dump($_FILES);
         move_uploaded_file($_FILES["candidature"]["tmp_name"],"candidatures/".$_FILES["candidature"]["name"]);
+        header('Location:confirm.php');
     }
+
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -42,6 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] =='POST')
         <br><br>
         <button type="submit" value="Envoyer" name="submit">Envoyer</button>
     </form>
+
 </body>
 </html>
 
